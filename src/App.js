@@ -21,9 +21,9 @@ function App() {
   const [data, setData] = React.useState("Not Found");
   
 
-  const handleScanResult = result => {
+ /*  const handleScanResult = result => {
     console.log(result);
-  }
+  } */
   const generateQrCode = async () => {
     try {
           const response = await QRCode.toDataURL(text);

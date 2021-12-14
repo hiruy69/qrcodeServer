@@ -28,7 +28,7 @@ function PrintQRCodePage({imageUrl}) {
 
 
 export default PrintQRCodePage;
-
+/* 
 // Component
 import ReactDOM from 'react-dom'
 import { QRCode } from 'react-qrcode'
@@ -48,4 +48,4 @@ export const App = () => {
       <input onChange={e => setValue(e.currentTarget.value)} />
     </>
   )
-}
+} */ 

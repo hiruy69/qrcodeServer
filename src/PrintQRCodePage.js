@@ -28,3 +28,24 @@ function PrintQRCodePage({imageUrl}) {
 
 
 export default PrintQRCodePage;
+
+// Component
+import ReactDOM from 'react-dom'
+import { QRCode } from 'react-qrcode'
+
+ReactDOM.render(<QRCode value="https://www.1stg.me" />)
+
+// hooks
+import { useQRCode } from 'react-qrcode'
+
+export const App = () => {
+  const [value, setValue] = useState('https://www.1stg.me')
+  const dataUrl = useQRCode(value)
+  return (
+    <>
+      <div>dataUrl: {dataUrl}</div>
+      <img src={dataUrl} />
+      <input onChange={e => setValue(e.currentTarget.value)} />
+    </>
+  )
+}
